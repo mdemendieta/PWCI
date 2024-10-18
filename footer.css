@@ -1,0 +1,46 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 200vh;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    margin-bottom: -850px;
+    width: 100vw;
+    color:rgb(237, 238, 247);
+}
+
+.footer-bottom{
+    background: rgb(4, 8, 59);
+    width: 100w;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+@media (max-width: 1080px){
+	footer{
+		margin-bottom: -1350px;
+		max-width: 100%;
+        position: absolute;
+
+	}
+}

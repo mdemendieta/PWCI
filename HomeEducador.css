@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --arrow-bg: rgb(132, 132, 145);
+    --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+    --option-bg: rgb(132, 132, 145);
+    --select-bg: rgb(132, 132, 145);
+  }
+
+
+body{
+	height: 100vh;
+	font-family: 'Poppins', sans-serif;
+	background: rgb(1, 0, 12);
+}
+
+.container{
+	margin: 30px;
+}
+
+.row{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.image{
+	background:  rgb(20, 35, 99);
+	position: relative;
+	flex: 1;
+	max-width: 460px;
+	height: 300px;
+	margin: 20px;
+	overflow: hidden;
+}
+
+.image img{
+    width: 100%;
+	opacity: 0.7;
+	position: relative;
+	vertical-align: top;
+	transition: 0.6s;
+	transition-property: opacity;
+}
+
+.image:hover img{
+	opacity: 1;
+}
+
+.image .details{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: rgb(247, 247, 247);
+	width: 100%;
+	height: 100%;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra del texto */
+}
+
+.image .details h2{
+	text-align: center;
+	font-size: 35px;
+	text-transform: uppercase;
+	font-weight: 300;
+	margin-top: 70px;
+	transition: 0.4s;
+	transition-property: transform;
+}
+
+.image .details h2 span{
+	font-weight: 900;
+}
+
+.image:hover .details h2{
+	transform: translateY(-30px);
+}
+
+.image .details p{
+	margin: 30px 30px 0 30px;
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
+	opacity: 0;
+	transition: 0.6s;
+	transition-property: opacity, transform;
+}
+
+.image:hover .details p{
+	opacity: 1;
+	transform: translateY(-40px);
+}
+
+.more{
+	position: absolute;
+	background: rgb(48, 115, 240);
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	bottom: -60px;
+	transition: 0.6s;
+	transition-property: bottom;
+}
+
+.image:hover .more{
+	bottom: 0;
+}
+
+.more .read-more{
+	color: rgb(219, 221, 228);
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.more .read-more span{
+	font-weight: 900;
+}
+
+.more .icon-links i{
+	color: rgb(219, 221, 228);
+	font-size: 20px;
+}
+
+.more .icon-links a:not(:last-child) i{
+	margin-right: 20px;
+}
+
+/* SIDEBAR Y NAVBAR */
+
+wrapper .header{
+    z-index: 1;
+    background: rgb(25, 29, 31);
+    position: fixed;
+    width: calc(100% - 0%);
+    height: 70px;
+    display: flex;
+    top: 0;
+    left: 0px;
+  }
+  
+  .wrapper .header .header-menu{
+    width: calc(100% - 0%);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .wrapper .header .header-menu .title img{
+    width: 200px;
+    margin-top: 15px;
+  }
+  
+  .wrapper .header .header-menu .sidebar-btn{
+    color: rgb(255, 223, 202);
+    position: absolute;
+    margin-left: 240px;
+    font-size: 22px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+  }
+  
+  .wrapper .header .header-menu .sidebar-btn:hover{
+    color: rgb(10, 12, 14);
+  }
+  
+  .wrapper .header .header-menu ul{
+    display: flex;
+  }
+  
+  .wrapper .header .header-menu ul li a{
+    background: rgb(25, 29, 31);
+    color: black;
+    display: block;
+    margin: 0 10px;
+    font-size: 18px;
+    width: 34px;
+    height: 34px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    transition-property: background, color;
+  }
+  
+  .wrapper .header .header-menu ul li a:hover{
+    background: rgb(25, 29, 31);
+    color: rgb(203, 202, 255);
+  }
+
+ ::selection { /* Cambia el color de fondo de la selección */
+  background-color: rgb(99, 101, 130); /* Puedes cambiar el color*/
+  color: rgb(4, 0, 53); /* Cambia el color del texto seleccionado */
+  
+}
+
+.wrapper .header form{
+  border-radius: 25px;
+  position:relative;
+}
+
+
+.wrapper .header form input{
+background: rgb(203, 202, 255);
+width: 100%;
+height: 100%;
+display: block;
+font-size: 15px;
+padding: 8px 40px 8px 20px;
+border: none;
+outline: none;
+color: rgb(16, 20, 22);
+}
+
+.wrapper .header form button{
+position: absolute;
+top: 0;
+right: 0;
+width: 50px;
+height: 100%;
+border-radius: 50%;
+cursor: pointer;
+border: none;
+background: none;
+font-size: 18px;
+} 
+.wrapper .header form button i{
+color: rgb(16, 20, 22);
+}
+.wrapper .header form button:hover i{
+color: #bbb;
+}
+
+
+  .wrapper .sidebar{
+    z-index: 1;
+    background: rgb(16, 20, 22);
+    position: fixed;
+    top: 70px;
+    left: 0px;
+    width: 250px;
+    height: 100%;
+    transition: 0.3s;
+    transition-property: width;
+    overflow-y: auto;
+  }
+  
+  .wrapper .sidebar .sidebar-menu{
+    overflow: hidden;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .profile img{
+    margin: 20px 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .profile p{
+    color: #bbb;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item{
+    width: 250px;
+    overflow: hidden;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item .menu-btn{
+    display: block;
+    color: rgb(202, 203, 255);
+    position: relative;
+    padding: 25px 20px;
+    transition: 0.3s;
+    transition-property: color;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item .menu-btn:hover{
+    color: rgb(13, 57, 255);
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item .menu-btn i{
+    margin-right: 20px;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item .menu-btn .drop-down{
+    float: right;
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  
+/* submenu */
+.wrapper .sidebar .sidebar-menu .item .sub-menu{
+  background:rgb(6, 11, 14);
+  overflow: hidden;
+  max-height: 0px;
+  border-radius: 0px;
+  transition: 0.3s;
+  transition-property: background, max-height;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a{
+  display: block;
+  position: relative;
+  color: rgb(202, 205, 255);
+  white-space: nowrap;
+  font-size: 14px;
+  padding: 15px;
+  border-radius: px;
+  transition: 0.3s;
+  transition-property: background;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a:hover{
+  background: rgb(16, 20, 22);
+}
+
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu i{
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.wrapper .sidebar .sidebar-menu .item:target .sub-menu{
+  max-height: 500px;
+}
+
+/* FOOTER */
+footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: auto;
+	margin-bottom: -130px;
+	width: 100vw;
+	color:rgb(202, 210, 255);
+  }
+  
+  .footer-bottom{
+	background: rgb(53, 51, 76);
+	width: 100w;
+	padding: 5px 0;
+	text-align: center;
+  }
+  
+  .footer-bottom p{
+	font-size: 14px;
+	word-spacing: 2px;
+	text-transform: capitalize;
+  }
+  
+  .footer-bottom span{
+	text-transform: uppercase;
+	opacity: .4;
+	font-weight: 200;
+  }
+  
+
+/* Responsive CSS */
+
+@media (max-width: 1080px){
+	.image{
+		flex: 100%;
+		max-width: 480px;
+	}
+}
+
+@media (max-width: 400px){
+	.image .details p{
+		font-size: 16px;
+	}
+
+	.more .read-more, .more .icon-links a i{
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 1080px){
+	footer{
+	  margin-bottom: -1350px;
+	  max-width: 100%;
+		  position: absolute;
+	
+	}
+	}

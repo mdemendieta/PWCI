@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.image {
+    width: 100%;
+    flex-shrink: 0;
+    transition: transform cubic-bezier(0.5, 0.5, 0.75, 0.75) 512ms;
+  }
+
+  .cards{
+    width: 100%;
+    padding: 1rem;
+  }
+
+.pagination {
+  width: 100%;
+  padding: 0 1rem;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.page-btn {
+  color: rgb(202, 207, 255);
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.25rem;
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+}
+.page-btn:last-child {
+  margin-right: 0;
+}
+.page-btn:is(a) {
+  text-decoration: none;
+  background-color: rgb(48, 115, 240);
+  border-radius: 10%;
+  cursor: pointer;
+  transition: color 128ms ease-out, background-color 128ms ease-out;
+}
+.page-btn:is(a):not(:target):hover, .page-btn:is(a):not(:target):focus, .page-btn:is(a):not(:target):active {
+  background-color: rgb(17, 64, 150);
+}
+.page-btn:is(a):target {
+  color: rgb(48, 115, 240);
+  background-color: rgb(202, 203, 255);
+}
+
+.page-num {
+    display: none;
+  }
+
+.page-step {
+  display: none;
+}
+
+/* AQUI HACE LA TRANSICION DE UN CONJUNTO DE CARDS A OTRA, 
+TAL VEZ HAYA QUE MOVERLE AQUI DESPUES
+ */
+
+.cards:has(#page-1:target) > .row > .image {
+  transform: translateX(0%);
+}
+.cards:has(#page-1:target) .page-step[data-shown="1"] {
+  display: inline-flex;
+}
+
+.cards:has(#page-2:target) > .row > .image {
+  transform: translateX(-400%);
+}
+.cards:has(#page-2:target) .page-step[data-shown="2"] {
+  display: inline-flex;
+}
+
+.cards:has(#page-3:target) > .row > .image {
+  transform: translateX(-400%);
+}
+.cards:has(#page-3:target) .page-step[data-shown="3"] {
+  display: inline-flex;
+}
+
+.cards:has(#page-4:target) > .row > .image {
+  transform: translateX(-400%);
+}
+.cards:has(#page-4:target) .page-step[data-shown="4"] {
+  display: inline-flex;
+}
+
+.cards:has(#page-5:target) > .row > .image {
+  transform: translateX(-400%);
+}
+.cards:has(#page-5:target) .page-step[data-shown="5"] {
+  display: inline-flex;
+}
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE++</title>
+    <link rel="icon" href="img/ICONO++.png">
+    <link rel="stylesheet" href="Log-Reg.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="navbar">
+                <a href=""><img src="img/LOGODESENFOCADO.png"></a>
+        </nav>
+    </header>
+    <div class="background"></div>
+
+        <div class="container">
+            <div class="content">
+
+                <div class="text-sci">
+                    <h2>¡Bienvenido! <br>
+                        <span>Lleva tus conocimientos al siguiente nivel en esta comunidad</span>
+                    </h2>
+
+                    <p>Explora tu visión sobre la programación 
+                        y la tecnologia </p>
+
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                    <a href="#"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#"><i class='bx bxl-pinterest-alt' ></i></a>
+                    <a href="#"><i class='bx bxl-tiktok' ></i></a>
+
+                </div>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="logreg-box">
+                                <!-- INICIAR SESIÓN -->
+                <div class="form-box login">
+                    <form id="formularioIniciarSesion" action="#">
+                        <h2>Iniciar Sesión</h2>
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-user'></i></span>
+                            <input type="text" id="usuarioIniciarSesion" required>
+                            <label>Nombre de usuario</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                            <input type="password" id="contrasenaIniciarSesion" required>
+                            <label>Contraseña</label>
+                        </div>
+                        <button type="submit" class="btn">Iniciar Sesión</button>
+                        <div class="login-register">
+                            <p>¿Aún no te has registrado a Code++? 
+                                <a href="#" class="register-link">¡Regístrate ahora!</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- REGISTRO -->
+                <div class="form-box register">
+                    <form id="formularioRegistro" action="#">
+                        <h2>Regístrate</h2>
+                        <div class="input-box">
+                            <input type="text" id="nombre" required>
+                            <label>Nombre (s)</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="apellidos" required>
+                            <label>Apellidos</label>
+                        </div>
+                        <div class="input-box-date">
+                            <input class="date-custom" type="date" id="fechaNacimiento" required>
+                            <label class="nacimiento">Fecha de nacimiento</label><br>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bx-envelope' ></i></span>
+                            <input type="email" id="correoElectronico" required>
+                            <label>Correo electrónico</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-user'></i></span>
+                            <input type="text" id="nombreUsuario" required>
+                            <label>Nombre de usuario</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                            <input type="password" id="contrasena" required>
+                            <label>Contraseña</label>
+                        </div>
+                        <button type="submit" class="btn">Comenzar</button>
+                        <div class="login-register">
+                            <p>¿Ya tienes una cuenta de Code++?
+                                <a href="#" class="login-link">¡Inicia Sesión!</a></p>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

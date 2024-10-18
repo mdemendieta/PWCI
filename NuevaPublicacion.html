@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <title>SketchLook | Nuevo curso </title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="NuevaPublicacion.css">
+     <link rel="stylesheet" href="PublicacionImagen.css">
+     <link rel="icon" href="img/ICONO++.png">
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+
+   </head>
+
+ <body>
+    <div class="wrapper">
+
+
+    			<!--header menu start-->
+          <div class="header">
+
+            <div class="header-menu">
+    
+              <div class="title"> 
+                <a href="blog.html"><img src="img/LOGOCODE.png"></a>
+              </div>
+    
+              <div class="sidebar-btn">
+                <i class='bx bx-menu' ></i>
+              </div>
+            </div>
+    
+          </div>
+                <!--header menu end-->
+
+                <!--sidebar start-->
+                <div class="sidebar">
+
+                  <div class="sidebar-menu">
+          
+                    <center class="profile">
+                      <img src="img/profile.jpg" alt="">
+                      <p>Usuario/Educador</p>
+                    </center>
+
+                    <center class="profile">
+                      <p>Nuevo curso</p>
+                    </center>
+          
+                    <li class="item" id="search">
+                      <a href="MisPublicaciones.html" class="menu-btn">
+                        <i class='bx bx-image'></i><span> Mis cursos </span>
+                      </a>
+          
+                    <li class="item" id="my-profile">
+                      <a href="MiPerfil.html" class="menu-btn">
+                        <i class='bx bx-user' ></i><span>Mi perfil</span>
+                      </a>
+                    </li>
+          
+                    <li class="item" id="home">
+                      <a href="HomeEducador.html" class="menu-btn">
+                        <i class='bx bx-home-heart' ></i><span>Inicio </span>
+                      </a>
+                    </li>
+          
+                    <li class="item" id="advanced">
+                      <a href="BusquedaAvanzada.html" class="menu-btn">
+                        <i class='bx bx-category'></i><span>Busqueda avanzada</i></span>
+                      </a>
+                    </li>
+          
+                    <li class="item" id="go-out">
+                      <a href="Log-Reg.html" class="menu-btn">
+                        <i class='bx bx-exit'></i><span>Salir</span>
+                      </a>
+                    </li>
+          
+                  </div>
+          
+                </div>
+			<!--sidebar end-->
+
+  <div class="container">
+
+    <div class="title">Crea tu nuevo curso</div>
+
+    <div class="content">
+
+      <form action="#">
+
+        <div class="publicacion-details">
+
+          <div class="input-box">
+
+            <span class="details">Titulo</span>
+            <input type="text" placeholder="" >
+
+          </div>
+
+          <div class="input-box">
+            <select id="miSelect" name="miSelect">
+        <option selected value="0">Escoge una categoria</option> 
+				<option value="opcion1">Diseño web</option>
+				<option value="opcion2">Seguridad</option>
+				<option value="opcion3">Desarrollo</option>
+        <option value="opcion3">Bases de datos</option>
+
+			  </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Descripción</span>
+			      <textarea id="descripcion" name="descripcion" style="resize: none;" placeholder="Platicanos un poco de tu obra uwu"></textarea>
+
+          </div>
+
+          <div class="input-box-file">
+            <input type="file" id="file" accept="image/*" hidden>
+            <div class="img-area" data-img="">
+              <i class='bx bxs-cloud-upload icon'></i>
+    
+            </div>
+            <button class="select-image">Subir contenido</button>
+          </div>
+
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Publicar obra">
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+  <footer>
+    <div class="footer-bottom">
+      <p>copyright &copy;2024</p>
+    </div>
+</footer>
+
+<script src="dashboard.js"></script>
+<script src="PublicacionImagen.js"></script>
+
+</body> 
+
+
+</html>

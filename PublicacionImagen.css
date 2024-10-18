@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+:root {
+	--verdeMedio: rgb(132, 132, 145);
+	--verdeLigero: rgb(11, 11, 175);
+	--verdeFuerte: rgb(14, 14, 109);
+
+}
+
+.img-area {
+	position: relative;
+	width: 240px;
+	height: 240px;
+	background: var(--verdeMedio);
+	margin-bottom: 30px;
+	border-radius: 5px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.img-area .icon {
+	font-size: 100px;
+}
+.img-area p {
+	color: #999999;
+}
+
+.img-area img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	z-index: 100;
+}
+/* ESTE ES PAR QUE SE VEA EL NOMBRE DEL ARCHIVO CUANDO PASAS ENCIMA DEL CURSOR XD */
+.img-area::before {
+	content: attr(data-img);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	color: #ffffff;
+	font-weight: 500;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	opacity: 0;
+	transition: all .3s ease;
+	z-index: 200;
+}
+.img-area.active:hover::before {
+	opacity: 1;
+}
+
+/* HASTA AQUI NOMAS :P */
+
+.select-image {
+	display: block;
+	width: 100%;
+	padding: 16px 0;
+	border-radius: 5px;
+	background: var(--verdeMedio);
+	color: rgb(203, 202, 255);
+	font-weight: 500;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+.select-image:hover {
+	background: var(--verdeFuerte);
+}
